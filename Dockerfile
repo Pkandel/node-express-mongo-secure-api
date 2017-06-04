@@ -16,6 +16,7 @@ RUN npm install
 RUN npm install pm2 -g
 
 # copy rest of the project
+RUN npm run build
 COPY build /app
 
 #expose port 4000 to outside world
