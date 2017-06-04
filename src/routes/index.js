@@ -1,5 +1,6 @@
 import express from 'express';
 import userRoute from './user.route';
+import mailRoute from './mail.route';
 import setupRoute from './setup.route';
 import config from '../config';
 import jwt from 'jsonwebtoken';
@@ -29,6 +30,9 @@ router.use('/',setupRoute);
 
 //mount user routes
 router.use('/user', userRoute);
+
+//just for try other i have to pass it through middleware
+router.use('/',mailRoute);
 
 //adding middleware for unauthorised access
 router.use(authenticate)
