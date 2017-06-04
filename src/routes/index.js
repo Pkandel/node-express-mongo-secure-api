@@ -17,9 +17,9 @@ app.use((req, res, next) => {
 router.get('/', (req, res) => {
     return res.json({
         success: true,
-        message: "Welcome to the InternMatch Platform",
+        message: "Welcome to the Prakash Kandel API platform",
         data: {
-            layout: "Welcome Page"
+            test: "Welcome Page"
         }
     })
 
