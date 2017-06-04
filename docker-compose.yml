@@ -1,0 +1,21 @@
+version: '2.0'
+
+services:
+  pkandel-server:
+    build:
+      context: .
+    # Expose ports [HOST:CONTAINER}
+    ports:
+      - "5000:5000"
+    # Set environment variables from this file
+    env_file:
+      - .env
+    # Overwrite any env var defined in .env file (if required)
+    environment:
+      - MONGO_URL=mongodb://mongo/pkandel-server
+    links:
+      - mongo:mongo
+  mongo:
+    image: "mongo:3.4.4"
+    ports:
+      - "27017:27017"

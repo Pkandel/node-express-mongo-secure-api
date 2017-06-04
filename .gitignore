@@ -1,0 +1,19 @@
+#ignore node modules
+node_modules/
+
+#idea files 
+.idea/
+.idea
+
+
+#ignore logs
+logs/
+
+#ignore build file
+build/
+
+
+# dotenv environment variables file
+.env
+
+npm-debug.log
